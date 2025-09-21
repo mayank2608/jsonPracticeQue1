@@ -1,0 +1,58 @@
+<form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label>Name: </label>
+        <input type="text" formControlName="name" placeholder="Enter your name">
+        <div *ngIf="studentForm.get('name')?.['invalid'] && (studentForm.get('name')?.['dirty'] || studentForm.get('name')?.['touched'])">
+            <small *ngIf="studentForm.get('name')?.hasError('required')">Name is required</small>
+        </div>
+    </div>
+
+    <div>
+        <label>Department: </label>
+        <input type="text" formControlName="department" placeholder="Enter your department">
+        <div *ngIf="studentForm.get('department')?.['invalid'] && (studentForm.get('department')?.['dirty'] || studentForm.get('department')?.['touched'])">
+            <small *ngIf="studentForm.get('department')?.hasError('required')">Department is required</small>
+        </div>
+    </div>
+
+    <div>
+        <label>Course: </label>
+        <input type="text" formControlName="course" placeholder="Enter your course">
+        <div *ngIf="studentForm.get('course')?.['invalid'] && (studentForm.get('course')?.['dirty'] || studentForm.get('course')?.['touched'])">
+            <small *ngIf="studentForm.get('course')?.hasError('required')">Course is required</small>
+        </div>
+    </div>
+    
+    <div>
+        <label>Email: </label>
+        <input type="text" formControlName="email" placeholder="Enter your email id">
+        <div *ngIf="studentForm.get('email')?.['invalid'] && (studentForm.get('email')?.['dirty'] || studentForm.get('email')?.['touched'])">
+            <small *ngIf="studentForm.get('email')?.hasError('required')">Email is required</small>
+            <small *ngIf="studentForm.get('email')?.hasError('pattern')">Invalid email id</small>
+        </div>
+    </div>
+
+    <div>
+        <label>Phone: </label>
+        <input type="text" formControlName="phone" placeholder="Enter your phone no.">
+        <div *ngIf="studentForm.get('phone')?.['invalid'] && (studentForm.get('phone')?.['dirty'] || studentForm.get('phone')?.['touched'])">
+            <small *ngIf="studentForm.get('phone')?.hasError('required')">Phone no. is required</small>
+            <small *ngIf="studentForm.get('phone')?.hasError('pattern')">Invalid phone no.</small>
+        </div>
+    </div>
+
+    <div>
+        <label>Location: </label>
+        <input type="text" formControlName="location" placeholder="Enter your location">
+        <div *ngIf="studentForm.get('location')?.['invalid'] && (studentForm.get('location')?.['dirty'] || studentForm.get('location')?.['touched'])">
+            <small *ngIf="studentForm.get('location')?.hasError('required')">location is required</small>
+        </div>
+    </div>
+
+    <input type="submit" value="Register">
+
+    <div>
+        <p [hidden]="!successFlag">Student saved successfully!</p>
+        <p [hidden]="!errorFlag">{{errorMessage}}</p>
+    </div>
+</form>

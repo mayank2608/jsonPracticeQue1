@@ -1,0 +1,21 @@
+<input type="text" (input)="searchValue($event)">
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Course</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Location</th>
+    </tr>
+    <tr *ngFor="let s of finalData$ | async">
+        <td>{{s.id}}</td>
+        <td>{{s.name}}</td>
+        <td>{{s.department}}</td>
+        <td>{{s.course}}</td>
+        <td>{{s.email}}</td>
+        <td>{{s.phone}}</td>
+        <td>{{s.location}}</td>
+    </tr>
+</table>

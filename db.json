@@ -1,0 +1,49 @@
+{
+  "students": [
+    {
+      "id": "6ba3",
+      "name": "Mayank",
+      "department": "CSE",
+      "course": "CSD",
+      "email": "mayank@gmail.com",
+      "phone": "+911234567890",
+      "location": "Mumbai"
+    },
+    {
+      "id": "a12b",
+      "name": "Ankit",
+      "department": "Mech",
+      "course": "mech",
+      "email": "ankit@gmail.com",
+      "phone": "0987654321",
+      "location": "Pune"
+    },
+    {
+      "id": "2f25",
+      "name": "Ankit",
+      "department": "Mech",
+      "course": "mech",
+      "email": "ankit@gmail.com",
+      "phone": "0987654321",
+      "location": ""
+    },
+    {
+      "id": "b100",
+      "name": "Ankit",
+      "department": "Mech",
+      "course": "mech",
+      "email": "ankit@gmail.com",
+      "phone": "0987654321",
+      "location": "Mumbai"
+    },
+    {
+      "id": "1c5a",
+      "name": "Ankit",
+      "department": "Mech",
+      "course": "mech",
+      "email": "ankit@gmail.com",
+      "phone": "0987654321",
+      "location": "Mumbai"
+    }
+  ]
+}
